@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saurabh Kumar | Data Analyst</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .typing {
+            color: #38bdf8;
+            font-weight: 500;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            color: #38bdf8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+            transform: scale(1.05);
+        }
+
+        /* Skills */
+        .skill {
+            margin: 15px 0;
+        }
+
+        .skill-bar {
+            background: #334155;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 12px;
+            background: #38bdf8;
+            width: 0;
+            animation: fillBar 2s forwards;
+        }
+
+        @keyframes fillBar {
+            to { width: var(--width); }
+        }
+
+        /* Social */
+        .social {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social a {
+            color: #38bdf8;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e293b;
+        }
+
+        @media(max-width:600px){
+            h1{font-size:30px;}
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Saurabh Kumar</h1>
+    <p class="typing" id="typing-text"></p>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+</header>
+
+<section>
+    <div class="card">
+        <h2>About Me</h2>
+        <p>Data Analyst passionate about turning raw data into meaningful business insights using Python, SQL and Power BI.</p>
+    </div>
+
+    <div class="card">
+        <h2>Skills</h2>
+
+        <div class="skill">
+            <p>Python</p>
+            <div class="skill-bar"><div class="skill-fill" style="--width:90%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>SQL</p>
+            <div class="skill-bar"><div class="skill-fill" style="--width:85%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>Power BI</p>
+            <div class="skill-bar"><div class="skill-fill" style="--width:80%"></div></div>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h2>Projects</h2>
+        <p><b>Sales Dashboard:</b> Interactive Power BI dashboard.</p>
+        <p><b>Customer Segmentation:</b> Machine learning clustering project.</p>
+    </div>
+
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: saurabhk48@gmail.com</p>
+        <div class="social">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Saurabh Kumar | Data Analyst
+</footer>
+
+<script>
+    const text = "Data Analyst | Python | SQL | Power BI";
+    let i = 0;
+    function typing() {
+        if (i < text.length) {
+            document.getElementById("typing-text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, 80);
+        }
+    }
+    typing();
+</script>
+
+</body>
+</html>
